@@ -43,6 +43,7 @@
     # wtype
     # yt-dlp
     zip
+    file
 
     # Coding stuff
     # openjdk23
@@ -63,5 +64,17 @@
   programs.fzf = {
     enable = true;
     enableBashIntegration = true;
+  };
+
+  programs.bash = {
+    enable = true;
+    shellAliases = {
+      btw = "echo i use nixos";
+      nrs = "sudo nixos-rebuild switch --flake ~/nixos-config-reborn#nmachine";
+      vi = "nvim";
+    };
+    initExtra = ''
+      export PS1="[\e[38;5;75m\#@\t\e[0m] \w\n\$ "
+    '';
   };
 }

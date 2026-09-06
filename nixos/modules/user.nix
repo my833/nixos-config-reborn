@@ -1,5 +1,4 @@
 { pkgs, username, ... }: {
-  programs.bash.enable = true;
 
   users = {
     defaultUserShell = pkgs.bash;
